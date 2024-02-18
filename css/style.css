@@ -1,0 +1,124 @@
+@font-face {
+    font-family: "FilsonPro";
+    src: url(../fonts/FilsonPro-Bold.ttf);
+    font-weight: 700;
+}
+@font-face {
+    font-family: "FilsonPro";
+    src: url(../fonts/FilsonPro-Book.ttf);
+    font-weight: 300;
+}
+
+:root {
+    --color-white: #FFFFFF;
+    --main-font: "FilsonPro";
+}
+
+body.bg-color {
+    background-color: #0F1C2B;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    color: var(--color-white);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.main {
+    flex: 1 0 auto;
+}
+
+h1.title {
+    font-family: var(--main-font);
+    font-size: 36px;
+    font-weight: 700;
+    margin-bottom: 65px;
+    color: var(--color-white);
+    text-align: center;
+}
+h2.title {
+    font-family: var(--main-font);
+    font-size: 24px;
+    font-weight: 700;
+    color: var(--color-white);
+}
+p.text {
+    font-family: var(--main-font);
+    font-size: 14;
+    font-weight: 300;
+    color: var(--color-white);
+    max-width: 150px;
+    text-align: center;
+}
+.container {
+    width: 100%;
+    max-width: 975px;
+    padding: 50px;
+    margin: 0 auto;
+}
+.flex-container {
+    display: flex;
+    align-items: center;
+    gap: 40px; 
+    justify-content: space-between;    
+    flex-wrap: wrap;
+}
+.flex-container__item {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 245px;
+    padding-top: 22px;
+    height: 470px;
+}
+.flex-container__item .space {
+    flex-grow: 1;
+    height: 100%;
+}
+.flex-container__item .absolute-bg {
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    left: 0;
+}
+.button {
+    background-image: linear-gradient(90deg, #F3997A, #D74692);
+    font-family: var(--main-font);
+    font-size: 18px;
+    font-weight: 700;
+    padding: 10px 20px;
+    cursor: pointer;
+    display: block;
+    margin-bottom: -30px;
+    color: var(--color-white);
+    outline: none;
+    border: none;
+    border-radius: 10px;
+    width: fit-content;
+}
+.gradient-text {
+    background: -webkit-linear-gradient(180deg, #F3997A, #D74692);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+@media (max-width: 914px) {
+    .container {
+        padding: 30px 20px;
+    }
+    .flex-container {
+        display: flex;
+        align-items: center;
+        gap: 60px; 
+        justify-content: center;    
+        flex-wrap: wrap;
+    }
+}
