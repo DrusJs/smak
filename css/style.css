@@ -23,6 +23,7 @@ body.bg-color {
     flex-direction: column;
     min-height: 100vh;
     color: var(--color-white);
+    min-width: 300px;
 }
 
 * {
